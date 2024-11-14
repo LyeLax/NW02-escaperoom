@@ -8,6 +8,8 @@ Jamie C,
 Joel T,
 Nate S
 
+First install node v21.0.0 and express, useful tutorial [here](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial) assuming you're using vscode.
+
 Install pkg's and run:
 When inside folder, run: 
 - npm install
