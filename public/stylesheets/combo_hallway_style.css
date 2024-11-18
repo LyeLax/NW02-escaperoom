@@ -1,0 +1,27 @@
+body {
+    background-color: #4c3e34;
+}
+
+#bg {
+    /* Center it */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Fit image to screen, cuz rn its way too big */
+img#hallway{
+    position:relative;
+    height:95vh;
+    width:80vw;
+}
+
+#comboLock{
+    position:absolute;
+}
+#comboLock > img{
+    height:5vh;
+    width:5vw;
+    /* Puts the lock on the door properly */
+    margin-bottom:15vh;
+}

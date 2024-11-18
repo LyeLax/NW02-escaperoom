@@ -25,7 +25,7 @@ function comboHandler(e){
     console.log("ID clicked: " + comboIdx);
     comboValues[comboIdx]++;
     comboValues[comboIdx] %= 10;
-    combo.src = "images/" + comboValues[comboIdx] + ".PNG";
+    combo.src = "images/combo/" + comboValues[comboIdx] + ".PNG";
 
     for (let i = 0; i < comboValues.length; i++){
         if (code[i] != comboValues[i]) return;
