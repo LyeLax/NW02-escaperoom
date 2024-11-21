@@ -25,3 +25,27 @@ img#hallway{
     /* Puts the lock on the door properly */
     margin-bottom:15vh;
 }
+
+#clocks {
+    position:absolute;
+    left:0;
+    display:flex;
+    flex-direction: row;
+}
+
+#clockCircles_h, #clockCircles_l {
+
+    height:10vh;
+    width:10vw;
+
+    border-radius: 50%;
+
+    /* Will prolly change this soon maybe */
+    border: 1vh solid black;
+    margin-left:9vw;
+}
+
+/* Make this one slightly lower */
+#clockCircles_l {
+    margin-top:10vh;
+}
