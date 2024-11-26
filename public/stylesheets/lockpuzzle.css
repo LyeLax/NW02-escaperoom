@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.lock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lock {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  background-color: #444;
+  padding: 10px;
+  border: 3px solid #222;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.pin-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.pin {
+  width: 50px;
+  height: 150px;
+  background-color: #555;
+  position: relative;
+  border: 2px solid #777;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.clickable {
+  width: 50px;
+  height: 30px;
+  background-color: #ffcc00;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+  transition: bottom 0.3s;
+}
+
+.positions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px; /* Matches the height of the pins */
+}
+
+.position-number {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-align: right;
+}
+
+img {
+  max-width: 90%; /* Ensures the image is responsive */
+  max-height: 90%; /* Ensures the image doesn't exceed the viewport */
+  border: 5px solid #fff; /* Optional border for styling */
+  border-radius: 10px; /* Optional rounded corners */
+}
