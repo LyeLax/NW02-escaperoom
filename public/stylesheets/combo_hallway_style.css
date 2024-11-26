@@ -38,14 +38,17 @@ img#hallway{
     height:10vh;
     width:10vw;
 
+    background-image: linear-gradient(100deg, transparent 0%, darkgray 50%, transparent 0%, gray 50%);
+
     border-radius: 50%;
 
     /* Will prolly change this soon maybe */
-    border: 1vh solid black;
+    border: 0.5vh solid black;
     margin-left:9vw;
 }
 
 /* Make this one slightly lower */
 #clockCircles_l {
     margin-top:10vh;
+
 }

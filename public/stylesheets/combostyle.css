@@ -25,36 +25,9 @@ body {
     height:18vh;
     padding-top: 10vh;
 }
-/* TODO one css selector for each combination thing 
-#combo1{
-    margin-left:-30vw;
-}
-#combo2{
-    margin-left:20px;
-}
-#combo3{
-    margin-left:30px;
-}
-#combo4{
-    margin-left:40px;
-}*/
-
 #comboLock{
     position:fixed;
     /*So we fit on the screen without scollbars */
     height:80vh;
 }
 
-.backButton {
-    background-color: bisque;
-    padding: 1em;
-    position:absolute;
-
-    text-decoration: none;
-    text-align: center;
-    font-size: 2vh;
-
-    border-radius: 1vh;
-    bottom:0;
-    left:0;
-}

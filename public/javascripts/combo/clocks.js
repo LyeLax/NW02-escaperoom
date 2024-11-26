@@ -19,7 +19,6 @@ function setupClocks(){
     const clock1conf = configs[currentPlr[0]];
     const clock2conf = configs[currentPlr[1]];
 
-    const minRot = 0;
     const clockHandHr = document.getElementsByClassName("hour");
     const clockHandMin = document.getElementsByClassName("minute");
     clockHandHr[0].style.transform = 'rotate('+clock1conf[0].toString()+'deg)';
