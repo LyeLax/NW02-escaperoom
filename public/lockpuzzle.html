@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lock-Picking Puzzle</title>
+  <link rel="stylesheet" href="stylesheets/lockpuzzle.css">
+</head>
+<body>
+  <div class="lock-container">
+    <div class="lock">
+      <div class="pin-container">
+        <div class="pin" id="pin1">
+          <div class="clickable" onclick="movePin('pin1')"></div>
+        </div>
+        <div class="positions" id="positions1">
+          <span class="position-number">4</span>
+          <span class="position-number">3</span>
+          <span class="position-number">2</span>
+          <span class="position-number">1</span>
+        </div>
+      </div>
+      <div class="pin-container">
+        <div class="pin" id="pin2">
+          <div class="clickable" onclick="movePin('pin2')"></div>
+        </div>
+        <div class="positions" id="positions2">
+          <span class="position-number">4</span>
+          <span class="position-number">3</span>
+          <span class="position-number">2</span>
+          <span class="position-number">1</span>
+        </div>
+      </div>
+      <div class="pin-container">
+        <div class="pin" id="pin3">
+          <div class="clickable" onclick="movePin('pin3')"></div>
+        </div>
+        <div class="positions" id="positions3">
+          <span class="position-number">4</span>
+          <span class="position-number">3</span>
+          <span class="position-number">2</span>
+          <span class="position-number">1</span>
+        </div>
+      </div>
+      <div class="pin-container">
+        <div class="pin" id="pin4">
+          <div class="clickable" onclick="movePin('pin4')"></div>
+        </div>
+        <div class="positions" id="positions4">
+          <span class="position-number">4</span>
+          <span class="position-number">3</span>
+          <span class="position-number">2</span>
+          <span class="position-number">1</span>
+        </div>
+      </div>
+    </div>
+    <div class="gap"></div>
+  </div>
+  <button id="unlock" onclick="checkSolution()">Unlock</button>
+  <button id="chart" onclick="navigateToChart()">Chart</button>
+  <div id="message"></div>
+  <script src="javascripts/lockpuzzle.js"></script>
+</body>
+</html>
