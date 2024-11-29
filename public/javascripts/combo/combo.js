@@ -12,7 +12,9 @@ function mirrorClickHandler(e){
 
 function handleSuccess(){
     // Will obv redirect user to success screen in the end, dont worry.
-    window.alert("You solved the puzzle :)");
+    //window.alert("You solved the puzzle :)");
+    window.location.replace("combo-hallway-finish.html");
+
 }
 
 const code = [7,3,5,5];
