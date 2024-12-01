@@ -4,9 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lock-Picking Puzzle</title>
-  <link rel="stylesheet" href="stylesheets/lockpuzzle.css">
+  <link rel="stylesheet" href="lockpuzzle.css">
 </head>
 <body>
+  <button id="hintButton1" class="hintButton">Get First Hint</button>
+  <p id="hintText1" class="hintText">Check the chart</p>
+  
+  <button id="hintButton2" class="hintButton" style="display: none;">Get Second Hint</button>
+  <p id="hintText2" class="hintText">A way out</p>
+
+  <button id="hintButton3" class="hintButton" style="display: none;">Get Third Hint</button>
+  <p id="hintText3" class="hintText">E 3</p>
+
   <div class="lock-container">
     <div class="lock">
       <div class="pin-container">
@@ -59,6 +68,6 @@
   <button id="unlock" onclick="checkSolution()">Unlock</button>
   <button id="chart" onclick="navigateToChart()">Chart</button>
   <div id="message"></div>
-  <script src="javascripts/lockpuzzle.js"></script>
+  <script src="lockpuzzle.js"></script>
 </body>
 </html>
