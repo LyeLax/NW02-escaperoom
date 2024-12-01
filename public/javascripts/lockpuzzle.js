@@ -1,3 +1,48 @@
+// Timer durations for each hint (in milliseconds)
+const HINT_INTERVAL = 180000; // 3 minutes
+const TOTAL_HINTS = 3;
+
+// Function to initialize the timer and hints
+function initializeHintSystem() {
+  // Get the stored start time, or set it to the current time
+  let startTime = sessionStorage.getItem('hintStartTime');
+  if (!startTime) {
+    startTime = Date.now();
+    sessionStorage.setItem('hintStartTime', startTime);
+  }
+
+  // Calculate elapsed time
+  const elapsedTime = Date.now() - startTime;
+
+  // Determine which hints should be available
+  for (let i = 1; i <= TOTAL_HINTS; i++) {
+    const hintTime = HINT_INTERVAL * i;
+    if (elapsedTime >= hintTime) {
+      showHintButton(i); // Show button if the time has passed
+    } else {
+      setTimeout(() => showHintButton(i), hintTime - elapsedTime); // Schedule button to appear later
+    }
+  }
+}
+
+// Function to show a hint button and handle its click event
+function showHintButton(hintNumber) {
+  const buttonId = `hintButton${hintNumber}`;
+  const textId = `hintText${hintNumber}`;
+  const button = document.getElementById(buttonId);
+  const text = document.getElementById(textId);
+
+  button.style.display = 'inline'; // Show the button
+
+  // Add click event listener to the button
+  button.addEventListener('click', function () {
+    text.style.display = 'block'; // Show the hint text
+    button.style.display = 'none'; // Hide the button after it's clicked
+  });
+}
+
+// Initialize the hint system when the page loads
+window.onload = initializeHintSystem;
 // Predefined positions for the pins (all within the range of the box height)
 const positions = [0, 40, 80, 120]; // Constrained to match the pin box height
 const correctPositions = {
@@ -40,7 +85,7 @@ function checkSolution() {
 
   const message = document.getElementById('message');
   if (allCorrect) {
-    message.textContent = 'Unlocked! The door opens.';
+    message.textContent = 'The door opens.';
     message.style.color = 'lime';
   } else {
     message.textContent = 'Pins are not in the correct position!';
