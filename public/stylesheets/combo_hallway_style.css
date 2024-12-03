@@ -3,6 +3,8 @@ body {
 }
 
 #bg {
+    width:100%;
+    height:100%;
     /* Center it */
     display:flex;
     align-items: center;
@@ -58,7 +60,8 @@ img#hallway{
     height:2.5%;
     width:5%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 120%;
+    /* Would rather it didnt scale when we zoom in or out so thats why this is like this */
+    font-size: 2.5vh;
     
     text-align: center;
     position: absolute;
@@ -72,4 +75,26 @@ img#hallway{
     top:18%;
 
 
+}
+
+/* Basically just making a trapezoid and flipping it over */
+#mirror {
+    position:absolute;
+    width:30vh;
+    height:0;
+    border-bottom:26vw rgb(218, 218, 218) inset;
+    border-left:14vw solid transparent;
+    border-right:10vw solid transparent;
+    transform:rotate(275deg);
+}
+
+#mirrorContainer {
+    position:absolute;
+    height:50%;
+    width:10%;
+    top:20%;
+    bottom:0;
+    left:60vw;
+    right:0;
+    /*! margin-bottom:5vh; */   
 }
