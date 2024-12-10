@@ -1,0 +1,126 @@
+/*<VARIABLES>*/
+:root {
+    --primary:#C0C0C0;
+    --secondary:#828282;
+    --tertiary:#a7a7a7;
+    --accent1:#6d6d6d;
+    --accent2:#4d4d4d;
+    --font:#FFFFFF;
+}
+/*</VARIABLES>*/
+
+html {
+    font-family:'Lucida Sans Regular', 'Trebuchet MS', Arial, sans-serif;
+    background-color:var(--primary);
+    border-color:black;
+    border-style:solid;
+    text-align:center;
+    height:100%;
+    width:100%;
+    box-sizing:border-box;
+}
+
+nav {
+    background-color:var(--secondary);
+    border-color:black;
+    border-style:solid;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    box-sizing:border-box;
+    padding:10px;
+    display:flex;
+    justify-content:center;
+}
+
+nav a {
+    padding:15px;
+}
+
+.button {
+    background-color:var(--secondary);
+    color:#FFFFFF;
+    text-decoration:none;
+    border-radius:5px 20px;
+}
+
+.button:hover {
+    background-color:var(--accent1);
+}
+.button:hover:active {
+    background-color:var(--accent2);
+    color:#dcdcdc;
+}
+
+body {
+    /*border-color:green;
+    border-style:solid;*/
+    height:98%;
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+}
+
+header {
+    /*border-color:red;
+    border-style:solid;*/
+    padding-top:65px;
+}
+
+.home-main {
+    /*border-color:blue;
+    border-style:solid;*/
+    flex:0.7;
+}
+
+.select-main {
+    background-color:var(--tertiary);
+    border-color:black;
+    border-style:solid;
+    flex:1;
+}
+
+aside {
+    background-color:var(--tertiary);
+    border-color:black;
+    border-style:solid;
+    flex:0.3;
+}
+
+.puzzles-box {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:35px 50px 20px 50px;
+    
+}
+
+.puzzles-box ul {
+    display:flex;
+    justify-content:space-between;
+    padding:0;
+    width:100%;
+    list-style:none;
+}
+
+.puzzles-box ul li {
+    padding:20px 50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.room-options {
+    display:flex;
+    justify-content:space-between;
+    padding:180px 250px;
+}
+
+.room-options a {
+    padding:30px 80px;
+}
+
+footer {
+    padding-top:10px;
+}
