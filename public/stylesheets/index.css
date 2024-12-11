@@ -44,6 +44,9 @@ nav a {
     text-decoration:none;
     border-radius:5px 20px;
 }
+.button > a {
+    text-decoration:none;
+}
 
 .button:hover {
     background-color:var(--accent1);

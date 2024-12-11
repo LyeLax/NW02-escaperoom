@@ -19,7 +19,10 @@ const configs = [clock1Config, clock2Config, clock3Config, clock4Config];
 
 function setupClocks(){
 
-    const currentPlr = idxs_plr1;
+    // This will work for now to differentiate between players
+    const plr_id = parseInt(window.location.port) % 2;
+    if (Number.isNaN(plr_id)) return;
+    const currentPlr = (plr_id == 0) ? idxs_plr1 : idxs_plr2;
     // Players will each get 2 clocks, this is just a way of abstracting that.
     const clock1conf = configs[currentPlr[0]];
     const clock2conf = configs[currentPlr[1]];

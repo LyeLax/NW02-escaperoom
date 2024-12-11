@@ -1,4 +1,5 @@
 
+const playerPorts = [3000, 3001];
 
 function main(){
     setupHandlers();
@@ -13,7 +14,28 @@ function mirrorClickHandler(e){
 function handleSuccess(){
     // Will obv redirect user to success screen in the end, dont worry.
     //window.alert("You solved the puzzle :)");
-    window.location.replace("combo-hallway-finish.html");
+
+    console.log("Setting puzzle completed");
+    
+    
+    playerPorts.forEach((pp)=>{
+        fetch("http://localhost:" + pp + "/checker/setPuzzleCompleted", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                val: "1"
+            })
+        }).then(resp => {
+            console.log("Resp: " + resp.status);
+            return resp.text();
+        }).then(data => {
+            // May cause NS_BINDING_ABORTED, but will still notify both player instances.
+            console.log("Data: " + data);
+            window.location.href = "/combo-hallway-finish.html";
+        }).catch(error => console.error('Error:', error));
+    });
 
 }
 
@@ -34,14 +56,9 @@ function comboHandler(e){
     }
 
     handleSuccess();
-
 }
 
 function setupHandlers(){
-    //const mirror = document.getElementById("mirror");
-    //mirror.addEventListener('click', mirrorClickHandler);
-    //mirror.style.clickable
-
     // For the combination lock
     for (let i = 1; i < 5; i++){
         document.getElementById("combo" + i.toString()).addEventListener('click', comboHandler);
