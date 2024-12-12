@@ -5,6 +5,23 @@
         <title>
             Congratulations!
         </title>
+        <script>
+            // Once a player has completed the puzzle, un-complete it server side, ensures that we can do it again if we wanna.
+            fetch("/checker/setPuzzleCompleted", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    val: "0"
+                })
+            }).then(resp => {
+                console.log("Resp: " + resp.status);
+                return resp.text();
+            }).then(data => {
+                console.log("Data: " + data);
+            }).catch(error => console.error('Error:', error));
+        </script>
         <link rel="stylesheet" href="stylesheets/combo_congrats.css">
         <link rel="stylesheet" href="stylesheets/backbutton.css">
     </head>
@@ -12,7 +29,8 @@
     <body>
         <h3>Congratulations!</h3>
         <h4>You solved the puzzle!</h4>
-        <h4>If you enjoyed this puzzle, head over to Exit Escape rooms, Newcastle</h4>
+        <h4>If you enjoyed this puzzle, head over to Exit Escape rooms, Newcastle.</h4>
+        <h4>67a Westgate Rd, Newcastle upon Tyne NE1 1SG</h4>
         <a href="/" style="bottom: 65%; left: 48%;" class="backButton">Menu</a>
     </body>
 
