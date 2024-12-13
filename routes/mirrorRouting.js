@@ -59,5 +59,18 @@ router.post('/draw', (req, res) => {
       res.status(500).json({ message: 'Error saving image', error: err });
     });
 });
+
+router.post('/delete', (req,res) =>{
+  console.log("delete button hit");
+
+  const deletePath = path.join(__dirname, '..', 'public', 'images', 'drawings', 'drawing.png')
+  fs.unlink(deletePath, (error) => {
+    if (error) {
+      console.error(`Error Deleting File: ${error}`)
+      return;
+    }
+    console.log("Deleted")
+  });
+});
 console.log("routing complete");
 module.exports = router;
