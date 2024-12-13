@@ -13,6 +13,8 @@ First install node v21.0.0 and express, useful tutorial [here](https://code.visu
 Install pkg's and run:
 When inside folder, run: 
 - npm install
-- npm start
+- npm run player1
+Then, in another terminal:
+- npm run player2
 
 Then go to localhost:3000 in your browser.
