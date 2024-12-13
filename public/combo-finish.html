@@ -6,21 +6,43 @@
             Congratulations!
         </title>
         <script>
-            // Once a player has completed the puzzle, un-complete it server side, ensures that we can do it again if we wanna.
-            fetch("/checker/setPuzzleCompleted", {
-                method: 'POST',
+
+            fetch("/checker/getPuzzleCompleted", {
+                method: 'GET',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'application/plain',
                 },
-                body: JSON.stringify({
-                    val: "0"
-                })
             }).then(resp => {
                 console.log("Resp: " + resp.status);
                 return resp.text();
             }).then(data => {
                 console.log("Data: " + data);
+                resetter(Number.parseInt(data));
+                return data;
             }).catch(error => console.error('Error:', error));
+
+
+            function resetter(num){
+
+                // Dont want to reset the puzzle if both players havent completed it yet.
+                if (Number.isNaN(num) || num < 2) return;
+
+                // Once both players have completed the puzzle, un-complete it server side, ensures that we can do it again if we wanna.
+                fetch("/checker/setPuzzleCompleted", {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        val: "0"
+                    })
+                }).then(resp => {
+                    console.log("Resp: " + resp.status);
+                    return resp.text();
+                }).then(data => {
+                    console.log("Data: " + data);
+                }).catch(error => console.error('Error:', error));
+            }
         </script>
         <link rel="stylesheet" href="stylesheets/combo_congrats.css">
         <link rel="stylesheet" href="stylesheets/backbutton.css">
