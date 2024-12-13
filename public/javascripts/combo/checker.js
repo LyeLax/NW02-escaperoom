@@ -10,7 +10,10 @@ function puzzleChecker(){
         return resp.text();
     }).then(data => {
         console.log("Data: " + data);
-        if (data == "1") window.location.replace("combo-hallway-finish.html");
+        if (data == "1") {
+            window.alert("A player has completed the puzzle!");
+            window.location.replace("combo-hallway-finish.html");
+        }
         return data;
     }).catch(error => console.error('Error:', error));
 }
