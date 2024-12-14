@@ -1,6 +1,4 @@
 
-const playerPorts = [3000, 3001];
-
 function main(){
     setupHandlers();
 }
@@ -16,26 +14,8 @@ function handleSuccess(){
     //window.alert("You solved the puzzle :)");
 
     console.log("Setting puzzle completed");
+    window.location.href = "/combo-hallway-finish.html";
     
-    
-    playerPorts.forEach((pp)=>{
-        fetch("http://localhost:" + pp + "/checker/setPuzzleCompleted", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                val: "1"
-            })
-        }).then(resp => {
-            console.log("Resp: " + resp.status);
-            return resp.text();
-        }).then(data => {
-            // May cause NS_BINDING_ABORTED, but will still notify both player instances.
-            console.log("Data: " + data);
-            window.location.href = "/combo-hallway-finish.html";
-        }).catch(error => console.error('Error:', error));
-    });
 
 }
 
