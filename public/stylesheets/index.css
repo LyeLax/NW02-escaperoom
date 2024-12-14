@@ -12,12 +12,12 @@
 html {
     font-family:'Lucida Sans Regular', 'Trebuchet MS', Arial, sans-serif;
     background-color:var(--primary);
-    border-color:black;
-    border-style:solid;
     text-align:center;
     height:100%;
     width:100%;
     box-sizing:border-box;
+    min-height:360px;
+    min-width:580px;
 }
 
 nav {
@@ -44,7 +44,9 @@ nav a {
     text-decoration:none;
     border-radius:5px 20px;
 }
+
 .button > a {
+    color:#FFFFFF;
     text-decoration:none;
 }
 
@@ -57,8 +59,6 @@ nav a {
 }
 
 body {
-    /*border-color:green;
-    border-style:solid;*/
     height:98%;
     box-sizing:border-box;
     display:flex;
@@ -72,8 +72,8 @@ header {
 }
 
 .home-main {
-    /*border-color:blue;
-    border-style:solid;*/
+    /* border-color:blue;
+    border-style:solid; */
     flex:0.7;
 }
 
@@ -99,15 +99,7 @@ aside {
     
 }
 
-.puzzles-box ul {
-    display:flex;
-    justify-content:space-between;
-    padding:0;
-    width:100%;
-    list-style:none;
-}
-
-.puzzles-box ul li {
+.puzzles-box a {
     padding:20px 50px;
     display:flex;
     justify-content:center;
@@ -117,11 +109,37 @@ aside {
 .room-options {
     display:flex;
     justify-content:space-between;
-    padding:180px 250px;
+    padding:5% 10%;
 }
 
 .room-options a {
-    padding:30px 80px;
+    padding:15% 80px;
+    width:20%;
+}
+
+.room-main {
+    background-color:var(--tertiary);
+    border-color:black;
+    border-style:solid;
+    flex:1;
+    padding:80px 0;
+}
+
+form {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+form input {
+    margin-bottom:40px;
+    text-align:center;
+}
+
+iframe {
+    border:3px solid black;
+    height:400px;
+    width:1200px;
 }
 
 footer {
