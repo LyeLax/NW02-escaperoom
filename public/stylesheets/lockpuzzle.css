@@ -71,10 +71,10 @@ body {
 }
 
 img {
-  max-width: 90%; /* Ensures the image is responsive */
-  max-height: 90%; /* Ensures the image doesn't exceed the viewport */
-  border: 5px solid #fff; /* Optional border for styling */
-  border-radius: 10px; /* Optional rounded corners */
+  max-width: 90%; 
+  max-height: 90%; 
+  border: 5px solid #fff; 
+  border-radius: 10px; 
 }
 
 .hintButton {
@@ -89,6 +89,9 @@ img {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  width: 100px; 
+  height: 40px;
+  text-align: center;
 }
 
 .hintButton:hover {
@@ -99,4 +102,5 @@ img {
   display: none;
   margin-top: 10px;
   color: green;
+  text-align: center;
 }
