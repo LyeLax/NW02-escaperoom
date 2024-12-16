@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>
+            Escape room challenge 6, To Exit, Player 1
+        </title>
+        <link rel="stylesheet" href="stylesheets/mapPuzzleHallway.css">
+    </head>
+    <body>
+        <script src="javascripts/mapPuzzle/mapScriptsP2.js"></script>
+        <div id="bg">
+            <img id="hallway" src="/images/mapPuzzle/hallwayMap.png" alt="hallway">
+            <a id="posterP2" onClick="displayPoster()"><div id="posterImgP2"><div id="posterTextP2">Find your way<br>Click Here</div></div></a>
+            <a id="mirrorContainerP2" href="mirror.html"style= "background-image: url(images/mapPuzzle/mirrorP2.png);"> </a>
+            <div id="mapContainer" onClick="displayMap()"><img src="images/mapPuzzle/map.png" height="120" width ="240"></div>
+            <div id="posterViewP2" class="hide">
+                <p>You cannot stay here<br>You must make your way to EXIT<br>Find the Map, Await directions<br>Reach the end</p>
+                <button type="button" id="closeButton" onClick="hidePoster()">Return</button>
+            </div>
+            <div id="mapView" class ="hide">
+                <img src ="images/mapPuzzle/map.png"height ="275" width="480">
+                <p id="mapText">Enter in your directions below:</p>
+                <label for="direction1">1:</label>
+                <select name="direction1" id="direction1">
+                    <option value="up">Up</option>
+                    <option value="down">Down</option>
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                </select>
+                <label for="direction2">2:</label>
+                <select name="direction2" id="direction2">
+                    <option value="up">Up</option>
+                    <option value="down">Down</option>
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                </select>
+                <label for="direction3">3:</label>
+                <select name="direction3" id="direction3">
+                    <option value="up">Up</option>
+                    <option value="down">Down</option>
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                </select>
+                <label for="direction4">4:</label>
+                <select name="direction4" id="direction4">
+                    <option value="up">Up</option>
+                    <option value="down">Down</option>
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                </select>
+                <label for="direction5">5:</label>
+                <select name="direction5" id="direction5">
+                    <option value="up">Up</option>
+                    <option value="down">Down</option>
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                </select>
+                <label for="direction6">6:</label>
+                <select name="direction6" id="direction6">
+                    <option value="up">Up</option>
+                    <option value="down">Down</option>
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                </select>
+                <button type="button" id="closeMapButton" onClick="hideMap()">Return</button>
+                <button type="button" id="submitDirections" onClick ="solutionChecker()">Submit</button>
+            </div>
+        </div>
+    </body>
+ 
+</html>
