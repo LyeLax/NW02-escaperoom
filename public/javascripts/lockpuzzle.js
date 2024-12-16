@@ -78,6 +78,8 @@ function checkSolution() {
   if (allCorrect) {
     message.textContent = 'The door opens.';
     message.style.color = 'lime';
+
+    window.location.href = 'roomLockExit.html';
   } else {
     message.textContent = 'Pins are not in the correct position!';
     message.style.color = 'red';
@@ -89,4 +91,8 @@ function navigateToChart() {
 }
 function navigateToLock() {
   window.location.href = 'lockpuzzle.html';
+}
+
+function navigateToExit() {
+  window.location.href = 'index.html';
 }
