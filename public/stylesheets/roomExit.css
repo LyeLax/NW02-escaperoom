@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/roomexitdesign.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+  }
+  
