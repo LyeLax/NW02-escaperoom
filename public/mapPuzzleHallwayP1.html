@@ -7,15 +7,22 @@
         <link rel="stylesheet" href="stylesheets/mapPuzzleHallway.css">
     </head>
     <body>
+        <script src="javascripts/mapPuzzle/mapScriptsP1.js"></script>
         <div id="bg">
             <img id="hallway" src="/images/mapPuzzle/hallwayMap.png" alt="hallway">
-            <a id="poster"><div id="posterImg"><div id="posterText">Find your way<br>Click Here</div></div></a>
+            <a id="poster" onClick="displayPoster()"><div id="posterImg"><div id="posterText">Find your way<br>Click Here</div></div></a>
             <a id="mirrorContainer" href="mirror.html"style= "background-image: url(images/mapPuzzle/mirrorP1.png);"> </a>
-            <a id="compass"style="background-image: url(images/mapPuzzle/compass.png);"><div id="compassImg"></div></a>
+            <a id="compass"style="background-image: url(images/mapPuzzle/compass.png);" onClick ="displayCompass()"><div id="compassImg"></div></a>
             <div id="posterView" class="hide">
                 <p>You cannot stay here<br>You must make your way to EXIT<br>Guide your friend with the compass<br>Reach the end</p>
-                <button type="button" id="closeButton">Return</button>
+                <button type="button" id="closeButton" onClick="hidePoster()">Return</button>
+            </div>
+            <div id="compassView" class="hide">
+                <img src ="images/mapPuzzle/flatCompass.png" alt = "compass" id="compassClose">
+                <div id="arrow"></div>
+                <button type="button" onClick ="hideCompass()">Return</button>
             </div>
         </div>
     </body>
+ 
 </html>
