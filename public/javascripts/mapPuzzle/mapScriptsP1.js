@@ -22,7 +22,7 @@ function displayCompass(){
     setTimeout(() => pointTo('E'), 2000); 
     setTimeout(() => pointTo('N'), 3000); 
     setTimeout(() => pointTo('S'), 4000);
-    setTimeout(() => pointTo('W'), 5000);    
+    setTimeout(() => pointTo('W'), 5000); 
     setTimeout(() => pointTo('S'), 6000); 
 
 }
