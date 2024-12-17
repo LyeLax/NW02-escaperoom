@@ -101,12 +101,15 @@ button {
 
     border-radius: 1vh;
     bottom: 15%;
+    z-index: 2;
 }
 #compassClose{
     position: absolute;
     top: 48%; 
     left: 52%; 
     transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
 }
 @keyframes rotateArrow {
     from {
