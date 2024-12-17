@@ -1,0 +1,224 @@
+body {
+    background-color: #4c3e34;
+}
+
+#bg {
+    position: relative; 
+    width: 100vw; 
+    height: 100vh; 
+}
+
+#submit {
+    position: relative; 
+    z-index: 10; 
+    top: 90%; 
+    left: 45%; 
+    padding: 10px 20px;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: block; 
+    text-align: center;
+}
+
+
+#submit:hover {
+    background-color: #6d747c;
+}
+
+#commsClick{
+    position: absolute;
+    top: 90%; 
+    left: 7%; 
+    width: 100px; 
+    height: 100px; 
+}
+
+#shelfClick{
+    position: absolute;
+    top: 44%; 
+    left: 35%; 
+    width: 348px; 
+    height: 251px; 
+    cursor: pointer; 
+    z-index: 2;
+}
+
+#mirrorClick{
+    position: absolute;
+    top: 33%; 
+    left: 74%; 
+    width: 348px; 
+    height: 360px; 
+    cursor: pointer; 
+    z-index: 2;
+}
+
+#hintClick{
+    position: absolute;
+    top: 78%; 
+    left: 45%; 
+    width: 200px; 
+    height: 200px; 
+    cursor: pointer; 
+    z-index: 2;
+}
+
+#hintOpenClick{
+    position: absolute;
+    top: 31%; 
+    left: 35%; 
+    width: 600px; 
+    height: 410px; 
+    cursor: pointer; 
+    z-index: 2;
+}
+
+img#hallway {
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: contain; 
+}
+
+img#shelfBG{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+}
+
+.jar {
+    position: absolute;
+    width: 100px; 
+    height: 100px;
+   
+    cursor: pointer;
+}
+
+.jar.highlight {
+    background-color: rgba(251, 255, 0, 0.664);
+}
+
+.jar[data-id="circle"] {
+    top: 15%;
+    left: 17.9%;
+}
+
+.jar[data-id="star"] {
+    top: 15%;
+    left: 31.9%;
+}
+
+.jar[data-id="fish"] {
+    top: 14%;
+    left: 46.2%;
+}
+
+.jar[data-id="glass"] {
+    top: 14%;
+    left: 60.2%;
+}
+
+.jar[data-id="infinity"] {
+    top: 14%;
+    left: 74.6%;
+}
+
+.jar[data-id="cross"] {
+    top: 40%;
+    left: 17.9%;
+}
+
+.jar[data-id="diamond"] {
+    top: 40%;
+    left: 31.9%;
+}
+
+.jar[data-id="triangle"] {
+    top: 38%;
+    left: 46.2%;
+}
+
+.jar[data-id="heart"] {
+    top: 38%;
+    left: 60%;
+}
+
+.jar[data-id="skull"] {
+    top: 38%;
+    left: 74%;
+}
+
+.jar[data-id="hourglass"] {
+    top: 65.3%;
+    left: 17.9%;
+}
+
+.jar[data-id="sun"] {
+    top: 65.3%;
+    left: 31.9%;
+}
+
+.jar[data-id="ladder"] {
+    top: 65.3%;
+    left: 47.2%;
+}
+
+.jar[data-id="square"] {
+    top: 65.3%; 
+    left: 61%;
+}
+.jar[data-id="moon"] {
+    top: 65.3%;
+    left: 75%;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.modal-content button {
+    margin: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#exitButton {
+    background-color: #28a745;
+    color: #fff;
+}
+
+#exitButton:hover {
+    background-color: #218838;
+}
+
