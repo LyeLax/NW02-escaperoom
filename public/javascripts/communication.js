@@ -31,7 +31,7 @@ function completePuzzle() {
 
     // Handle Exit Button
     document.getElementById('exitButton').addEventListener('click', () => {
-        window.location.href = 'select_puzzle.html'; // Replace with your homepage file/path
+        window.location.href = 'select_puzzle.html';
     });
 }
 
