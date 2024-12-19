@@ -1,5 +1,7 @@
 # Escape Room Design Project
 
+Files for our attempt at tackling the "Escape Room Game Design" challenge.
+
 Contributors:
 Alex M,
 Cole H,
@@ -21,3 +23,4 @@ Then, in another terminal:
 - `npm run player2`
 
 Then go to localhost:3000 in your browser, and localhost:3001 for player 2.
+
